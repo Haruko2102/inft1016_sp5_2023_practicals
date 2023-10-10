@@ -52,8 +52,8 @@ Inline code: `make this word inline.`
 # This is a large heading #
 
 
-```
-Format this text as code 
+
+```Format this text as code 
 def foo():
     if not bar:
         return True 
@@ -68,7 +68,13 @@ An inline-style link
 
 
 | Number | Colour | Size |
-| :------| :------| :----|
+| -------| -------| -----|
 |    1   |   blue |  23  |
 |   3    |  green |  32  |
 |    5   |  red   |  11  |
+
+
+```
+def my_function():
+  print("Hello from a function")
+```
