@@ -31,18 +31,18 @@ _**This text is bold and italic**_
 
 # This is a large heading #
 1. Here's an unordered list, with:
--  One item
-*  Two item
-*  Three item
-*   Sub-item one!
-*   Sub-item two!
+    *  One item
+    *  Two item
+    *  Three item
+        *   Sub-item one!
+        *   Sub-item two!
 # This is a large heading #
-* Here's an ordered list, with:
-*  Item one
-*  tem two
-*  Item three
-*   Item three-A
-*   Item three-B
+2.  Here's an ordered list, with:
+    *  Item one
+    *  tem two
+    *  Item three
+        *   Item three-A
+        *   Item three-B
 
-This is a block quote. It should be in block quotes! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+>This is a block quote. It should be in block quotes! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
