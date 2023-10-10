@@ -65,3 +65,10 @@ Add an image
 
 An inline-style link
 [_File:Kismet-IMG 6007-black.jpg._](https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg)
+
+
+| Number | Colour | Size |
+| :------| :------| :----|
+|    1   |   blue |  23  |
+|   3    |  green |  32  |
+|    5   |  red   |  11  |
