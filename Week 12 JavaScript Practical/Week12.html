@@ -6,7 +6,7 @@
         counter = 0; // Start with number 0 and it will reset when we clicking on the button 
         
         function countClicks(element) { // This function was created to put the code for counting number we clicked 
-          counter = counter + 1; // if we clicked, the number will go up and plus 1 
+          counter = counter + 1; // if we clicked, the number will go up with and then plus 1 
           var output = 'The link was pressed ' + counter + ' times.'; // It will show up the message inside and display the counter 
           element.innerHTML = output; // identified and change the text inside to be the number as we want
 }
@@ -14,10 +14,12 @@
 
 </head>
 <body>
-    <h1>JavaScript Demo</h1> 
-    <a href="#" onclick="countClicks(this);">Click me</a>
-    <p id="boxy"></p>
-
-    <img onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"src="http://www.outgrabe.net/cat01.jpg" onmouseout="this.src='http://www.outgrabe.net/cat01.jpg'" />
+    <!--Heading-->
+    <h1>JavaScript Demo</h1>  
+    <!-- It allow function know what could be change-->
+    <a href="#" onclick="countClicks(this);">Click me</a> 
+    <p id="boxy"></p> 
+    <!--Using the onmouseover(if the mouse on the picture area, it will change to this picture), onmouseout (if the mouse outside the picture area, it will change to the that picture))-->
+    <img onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"src="http://www.outgrabe.net/cat01.jpg" onmouseout="this.src='http://www.outgrabe.net/cat01.jpg'" />  
 </body>
 </html>
