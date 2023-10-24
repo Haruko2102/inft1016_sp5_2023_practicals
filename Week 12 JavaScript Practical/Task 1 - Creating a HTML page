@@ -2,10 +2,9 @@
 <head>
   <title>Week 12</title>
 </head>
-<body>
-  <h1>JavaScript Demo</h1>
-  <a href="#" onclick="alert('Hey!');">Click me</a>
-  <p id="box"></p>
-</body>
+    <body>
+        <h1>JavaScript Demo</h1>
+        <a href="#" onclick="alert('Hey!');">Click me</a>
+        <p id="box"></p>
+    </body>
 </html>
-
