@@ -2,19 +2,19 @@
 <head>
     <title>Week 12</title>
 
-    <script>
-        counter = 0;
-
-        function countClicks(element) {
-          counter = counter + 1;
-          var output = 'The link was pressed ' + counter + ' times.';
-          element.innerHTML = output;
+    <script>    // Script tag make all of the thing inside will allowed but not show up to she web page 
+        counter = 0; // Start with number 0 and it will reset when we clicking on the button 
+        
+        function countClicks(element) { // This function was created to put the code for counting number we clicked 
+          counter = counter + 1; // if we clicked, the number will go up and plus 1 
+          var output = 'The link was pressed ' + counter + ' times.'; // It will show up the message inside and display the counter 
+          element.innerHTML = output; // identified and change the text inside to be the number as we want
 }
     </script>
 
 </head>
 <body>
-    <h1>JavaScript Demo</h1>
+    <h1>JavaScript Demo</h1> 
     <a href="#" onclick="countClicks(this);">Click me</a>
     <p id="boxy"></p>
 
