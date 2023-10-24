@@ -5,6 +5,7 @@
 <body>
   <h1>JavaScript Demo</h1>
   <a href="#" onclick="alert('Hey!');">Click me</a>
-  document.getElementById('box');
+  <p id="box"></p>
 </body>
 </html>
+
