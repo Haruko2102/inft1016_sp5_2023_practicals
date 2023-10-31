@@ -30,3 +30,16 @@
     body {  
     background: white url(https://colinbendell.cloudinary.com/image/upload/c_crop,f_auto,g_auto,h_350,w_400/v1512090971/Wizard-Clap-by-Markus-Magnusson.gif) repeat fixed top left;  
     }
+    @media screen {  
+        body {  
+          color: black;  
+          ;background-color: yellow;  
+        }  
+      }
+      
+      @media print {  
+        body {  
+          color: black;  
+          background-color: white;  
+        }
+      }
