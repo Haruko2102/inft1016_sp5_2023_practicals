@@ -1,0 +1,33 @@
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" title="Basic" /> /* These styles will remove all padding and margins on h1, h2 and p elements, and make the headings red. */
+
+   h1, h2,  {
+      padding: 0;
+      font: 1.33em/1.17 Verdana, sans-serif;
+    }
+
+    h1, h2 {       
+      margin: 0.83em 0 0.17em 0;
+      color: red;
+    }
+    p:first-of-type {
+    font: 0.17em/1.33 Verdana, sans-serif;
+    }
+    p + p {text-indent: 5em;}
+    /* this selects p tags preceded by a p tag --
+     that is, not the first p tag */
+    div#wrapper {  
+        width: 100px;  
+    }  
+    div#banner{  
+    margin-left: 10px;  
+    margin-right: 10px;  
+    padding-left: 10px;  
+    padding-right: 10px;  
+    border-left: 1px solid black;  
+    border-right: 1px solid black;  
+    width: 30px;
+    }
+    body {  
+    background: white url(https://colinbendell.cloudinary.com/image/upload/c_crop,f_auto,g_auto,h_350,w_400/v1512090971/Wizard-Clap-by-Markus-Magnusson.gif) repeat fixed top left;  
+    }
