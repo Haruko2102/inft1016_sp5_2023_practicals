@@ -1,22 +1,39 @@
 <html>
 <head>
+<title>Experiments with CSS</title>
+<style type='text/css'> /* These styles will remove all padding and margins on h1, h2 and p elements, and make the headings red. */
 
-<style type="text/css">
-p { color: white; }
-body { background-color: green; }
+   h1, h2, p {
+      padding: 0;
+      margin: 0;
+      font: 1em/1.33 Verdana, sans-serif;
+   }
+
+   h1, h2 {
+      color: red;
+   }
+
 </style>
-
 </head>
 <body>
-  <p>This page hurts my retinas!</p>
-  <div>
-    <p>HTML, an initialism of <b>HyperText Markup Language</b>, is the predominant markup language for Web pages. It provides a means to describe the structure of text-based information in a document - by denoting certain text as links, headings, paragraphs, lists, and so on - and to supplement that text with interactive forms, embedded images, and other objects. HTML is written in the form of tags, surrounded by angle brackets. HTML can also describe, to some degree, the appearance and semantics of a document, and can include embedded scripting language code (such as JavaScript) which can affect the behavior of Web browsers and other HTML processors.</p>
-    
-    <p>Files and URLs containing HTML often have a .html or .htm filename extension.</p>
-    
-    <p>"HTML" (2008, December 3). In Wikipedia, the free encyclopedia. Retrieved December 3, 2008, from <a href="http://en.wikipedia.org/wiki/HTML">http://en.wikipedia.org/wiki/HTML</a></p>
-    <span style="color: red">by denoting certain text as links, headings, paragraphs, lists, and so on</span>
+   <div id="wrapper">
+   <h1>Big page heading</h1>
+   <p class="introduction">This is the introductory paragraph.</p>
+   <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
 
-  </div>
+   <div id="films">
+      <h2><strong>A simple subhead:</strong> Films</h2>
+      <p class='recent'>A short discussion of the last three films I saw.</p>
+      <p>A discussion about my least favourite film</p>
+
+    <div class="movieQuote">
+       <blockquote>
+         <p>"Stop thinking like a cop: start thinking playstation. Just blow stuff up!"</p>
+         <p class="source">XXX</p>
+      </blockquote>
+    </div> <!-- end of movieQuote div -->
+   </div> <!-- end of div#films -->
+   </div><!-- end of div#wrapper -->
 </body>
+
 </html>
