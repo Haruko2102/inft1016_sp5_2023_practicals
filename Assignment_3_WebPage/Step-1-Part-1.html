@@ -1,11 +1,37 @@
 
 <html>
 <head>
-    <title></title>
+    <title>My page title</title>
 </head>
-<body>
+<script>
+    function Do_Change(src, text){
+    // Change the image 
+    const Change_Image = document.querySelector('img')
+    Change_Image.src = src 
+    // Change the text
+    const text_paragraph = document.querySelector('#text')
+    text.innerHTML = text 
+}
+</script>
+
+
+<body>https://www.datasciencecentral.com/wp-content/uploads/2022/05/smart-city-1-1536x1024.jpg
     <img src="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg" />
-    <p>"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg">https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse</a></p>
-    <button>Click to see the image</button>
+    <p id = 'text'>"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg">https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse</a></p>
+    
+    
+    <button onclick = "Do_Change('https://riberasolutions.com/wp-content/uploads/2018/03/smart-city-iot-and-ai.png', `Attribution-ShareAlike (CC BY-SA 2.0)` )">
+        Picture 2 
+    </button>
+    <button onclick = "Do_Change(`https://www.kreyonsystems.com/Blog/wp-content/uploads/2016/10/city.png`, `Attribution-ShareAlike (CC BY-SA 2.0)` )">
+        Picture 3 
+    </button>
+    <button onclick = "Do_Change('https://www.smartcity.co.nz/wp-content/uploads/2021/05/Picture1.jpg', `Attribution-ShareAlike (CC BY-SA 2.0)` )">
+        Picture 4
+    </button>
+    <button onclick = "Do_Change('https://www.iot-now.com/wp-content/uploads/2017/09/image-1.png', `Attribution-ShareAlike (CC BY-SA 2.0)` )">
+        Picture 5 
+    </button>
+
 </body>
 </html>
