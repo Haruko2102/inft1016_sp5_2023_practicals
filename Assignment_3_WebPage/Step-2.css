@@ -23,22 +23,3 @@ body {
 h1 {
     color: var(--heading-color);
 }
-
-function toggle_theme() {
-    
-    /* Get the root element of the document (where you set data-theme) */
-    const root = document.documentElement;
-    
-    /*  Get the current theme from the 'data-theme' attribute */
-    const currentTheme = root.getAttribute('data-theme');
-    
-    /* Toggle between 'light' and 'dark' using an if statement */
-    
-    let newTheme = 'light';
-
-    if (currentTheme !== 'light') {
-        newTheme = 'dark';
-    
-    }
-        root.setAttribute('data-theme', newTheme);
-}

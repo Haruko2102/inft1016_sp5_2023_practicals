@@ -13,28 +13,41 @@
             const text_paragraph = document.querySelector('#text')
             text.innerHTML = text 
         }
-        function toggle_theme() {
+            function toggle_theme() {
     
-         /* Get the root element of the document (where you set data-theme) */
-        const root = document.documentElement;
+            /* Get the root element of the document (where you set data-theme) */
+            const root = document.documentElement;
     
-        /*  Get the current theme from the 'data-theme' attribute */
-        const currentTheme = root.getAttribute('data-theme');
+            /*  Get the current theme from the 'data-theme' attribute */
+            const currentTheme = root.getAttribute('data-theme');
     
-        /* Toggle between 'light' and 'dark' using an if statement */
+            /* Toggle between 'light' and 'dark' using an if statement */
     
-        let newTheme = 'light';
+            let newTheme = 'light';
 
-        if (currentTheme !== 'light') {
-        newTheme = 'dark';
-    
+            if (currentTheme !== 'light') {
+            newTheme = 'dark';
+            }
+            root.setAttribute('data-theme', newTheme)
         }
-        root.setAttribute('data-theme', newTheme);
-        }
+
+
+
+
         </script>  
     </head>  
     <body>    
-        <header>      
+        <header>
+            <div id = 'date'></div>
+                
+                <script>     
+                
+                var today_date = new Date();
+                var date = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                var month = ["January", "February", "March", "Apirl", "May", "June", "July", "August", "September", "October", "November", "December"]
+                document.getElementById("date").innerHTML = 'Today is ' + date[today_date.getDay()] + ' ' + today_date.getDate() + ' ' + month[today_date.getMonth()] + ' ' + today_date.getFullYear();
+                
+                </script>      
             <h1>Header</h1>      
             <button onclick="toggle_theme()">Toggle Theme</button>    
         </header>    
