@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>  
+    <head>    
+        <meta charset="utf-8">    
+        <title>My page title</title>    
+        <link rel="stylesheet" href="base.css">    
+        <script></script>  
+    </head> 
+    <script>
+    function Do_Change(src, text){
+    // Change the image 
+    const Change_Image = document.querySelector('img')
+    Change_Image.src = src 
+    // Change the text
+    const text_paragraph = document.querySelector('#text')
+    text.innerHTML = text 
+}
+</script> 
+    <body>    
+        <header>      
+            <h1>Header</h1>      
+            <button onclick="">Toggle Theme</button>    
+        </header>    
+        <nav>      
+            <ul>        
+                <li><a href="#">Home</a></li>        
+                <li><a href="#">Our team</a></li>       
+                <li><a href="#">Projects</a></li>        
+                <li><a href="#">Contact</a></li>      
+            </ul>       
+            <form>         
+                <input type="text" name="user_name" placeholder="Enter your name!">         
+                <button type="submit">Apply!</button>       
+            </form>     
+        </nav>    
+        <main>      
+            <article>        
+                <h2>Article heading</h2>        
+                <p>IoT Not just a new emerging technology!!!</p>        
+                <h3>Subsection</h3>        
+                <p>Internet of Things (IoT) plays an important role in the development of smart city and smart home construction projects. In the field of smart city construction, IoT is properly integrated to manage and optimize energy sources, including traffic management, street lights, and energy systems. IoT devices, such as sensors and monitoring systems, are developed to collect real-time data, helping to manage information about pollution, security and public utilities.</p>        
+                <p>In the field of smart homes, IoT allows connecting and controlling devices in the home via the internet. Users can manage lighting, temperature, security, and many other factors remotely via mobile phones or other devices. Sensors and smart devices, such as smart thermostats, security cameras, and remote controls, create a unified and convenient smart home ecosystem.</p>        
+                <h3>Another subsection</h3>        
+                <p>In the field of smart homes, the combination of IoT and artificial intelligence (AI) brings optimal user experience. The system is capable of learning and self-adjusting based on habits and priorities, from device control to optimal energy savings. Devices such as refrigerators, washing machines and smart lights can interact with each other to create a flexible and user-friendly living environment.</p>        
+                <p>Thanks to the integration of IoT in city construction and smart homes, we can witness increased efficiency, energy savings, and improved quality of life for communities. However, there are also challenges such as information security and data management that need to be carefully considered and addressed to ensure the success and sustainability of these projects.</p>      
+            </article>      
+            <aside>        
+                <h2>Related</h2>        
+                <img src="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg" />
+                <p id = 'text'>"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg">https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse</a></p>
+                
+                
+                <button onclick = "Do_Change('https://riberasolutions.com/wp-content/uploads/2018/03/smart-city-iot-and-ai.png', `Attribution-ShareAlike (CC BY-SA 2.0)` )">
+                    Picture 2 
+                </button>
+                <button onclick = "Do_Change(`https://upload.wikimedia.org/wikipedia/commons/7/71/Smart_mobility_image.png`, `Wikimedia ( CC-BY-SA-4.0)` )">
+                    Picture 3 
+                </button>
+                <button onclick = "Do_Change('https://api.ndla.no/image-api/raw/H2PP9F6b.PNG?width=1120', `Mediafarm AS (CC BY-SA)` )">
+                    Picture 4
+                </button>
+                <button onclick = "Do_Change('https://live.staticflickr.com/7355/16389740882_68b23e7dae_b.jpg', `	Attribution-ShareAlike (CC BY-SA 2.0)` )">
+                    Picture 5 
+                </button>       
+                </ul>      
+            </aside>    
+        </main>    
+        <footer>      
+            <p>©Copyright 2050 by nobody. All rights reversed.</p>    
+        </footer>  
+    </body>
+    </html>
