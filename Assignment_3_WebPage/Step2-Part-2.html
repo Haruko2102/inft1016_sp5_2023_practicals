@@ -13,12 +13,30 @@
             const text_paragraph = document.querySelector('#text')
             text.innerHTML = text 
         }
+        function toggle_theme() {
+    
+         /* Get the root element of the document (where you set data-theme) */
+        const root = document.documentElement;
+    
+        /*  Get the current theme from the 'data-theme' attribute */
+        const currentTheme = root.getAttribute('data-theme');
+    
+        /* Toggle between 'light' and 'dark' using an if statement */
+    
+        let newTheme = 'light';
+
+        if (currentTheme !== 'light') {
+        newTheme = 'dark';
+    
+        }
+        root.setAttribute('data-theme', newTheme);
+        }
         </script>  
     </head>  
     <body>    
         <header>      
             <h1>Header</h1>      
-            <button onclick="toogle_theme">Toggle Theme</button>    
+            <button onclick="toggle_theme()">Toggle Theme</button>    
         </header>    
         <nav>      
             <ul>        
@@ -61,8 +79,7 @@
                 </button>
                 <button onclick = "Do_Change('https://live.staticflickr.com/7355/16389740882_68b23e7dae_b.jpg', `	Attribution-ShareAlike (CC BY-SA 2.0)` )">
                     Picture 5 
-                </button>       
-                </ul>      
+                </button>           
             </aside>    
         </main>    
         <footer>      
