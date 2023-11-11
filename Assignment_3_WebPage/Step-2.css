@@ -1,15 +1,43 @@
 :root {
-    --primary-color: rgb(20,50,100);
+    --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(218, 41, 123);
-    --bg-color: rgb(248, 248, 248);
+    --bg-color: rgb(55, 156, 68);
     --font-color: rgb(15, 13, 2);
     --heading-color: rgb(119, 65, 204);
 }
 
 [data-theme="dark"] {
-    --primary-color: rgb(51, 134, 182);
+    --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(51, 37, 112);
-    --bg-color: rgb(255, 255, 255);
-    --font-color: rgb(0, 0, 0);
+    --bg-color: rgb(172, 40, 40);
+    --font-color: rgb(245, 233, 233);
     --heading-color: rgb(20, 165, 85);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h1 {
+    color: var(--heading-color);
+}
+
+function toogle_theme() {
+    
+    /* Get the root element of the document (where you set data-theme) */
+    const root = document.documentElement;
+    
+    /*  Get the current theme from the 'data-theme' attribute */
+    const currentTheme = root.getAttribute('data-theme');
+    
+    /* Toggle between 'light' and 'dark' using an if statement */
+    
+    let newTheme = 'light';
+
+    if (currentTheme !== 'light') {
+        newTheme = 'dark';
+    
+    }
+        root.setAttribute('data-theme', newTheme);
 }
