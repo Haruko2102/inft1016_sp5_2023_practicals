@@ -2,7 +2,7 @@
 <html>  
     <head>    
         <meta charset="utf-8">    
-        <title>My page title</title>    
+        <title>Minh the first page</title>    
         <link rel="stylesheet" href="Step-2.css">    
         <script>
             
@@ -55,12 +55,22 @@
             }
 
             function hi_user(){
-                alert("Correct?")
+                let user_input = document.querySelector("#user_input").value;
+
+                alert("Hello " + user_input)
+            }
+
+            function change_heading(){
+                
+                var user_input = document.getElementById('user_input').value;
+
+                var heading = document.getElementById('heading');
+                heading.textContent = 'Hello ' + user_input
             }
 
         </script>  
     </head>  
-    <body onload = "show_the_time()">    
+    <body onload = "show_the_time();">    
         <header>
             
             <div id = 'date'></div> 
@@ -73,7 +83,7 @@
                 document.getElementById("date").innerHTML = 'Today is ' + date[today_date.getDay()] + ' ' + today_date.getDate() + ' ' + month[today_date.getMonth()] + ' ' + today_date.getFullYear();
                 
                 </script>      
-            <h1>Header</h1>      
+            <h1 id = 'heading'>Header</h1>      
             <button onclick="toggle_theme()">Toggle Theme</button>    
         </header>    
         <nav>      
@@ -84,8 +94,8 @@
                 <li><a href="#">Contact</a></li>      
             </ul>       
             <form>         
-                <input type="text" name="user_name" placeholder="Enter your name!">         
-                <button onclick="hi_user()" type="submit">Apply!</button>       
+                <input id = "user_input"  type="text" name="user_name" placeholder="Enter your name!">         
+                <button onclick="hi_user(); change_heading()" type="button">Apply!</button>       
             </form>     
         </nav>    
         <main>      
