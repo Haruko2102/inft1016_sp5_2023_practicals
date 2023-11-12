@@ -3,102 +3,140 @@
     <head>    
         <meta charset="utf-8">    
         <title>Minh the first page</title>    
+        
+        <!-- linking with the css file-->
         <link rel="stylesheet" href="Step-2.css">    
         <script>
             
+            //function Do_Change to change the image after user click on button
             function Do_Change(src, text){
+            
             // Change the image 
             const Change_Image = document.querySelector('img')
             Change_Image.src = src 
+            
             // Change the text
             const text_paragraph = document.querySelector('#text')
             text.innerHTML = text 
             }
             
+            //function toggle_theme to change the theme after user click on Toggle Theme button
             function toggle_theme() {
     
-            /* Get the root element of the document (where you set data-theme) */
+            // get the root of data-theme
             const root = document.documentElement;
                 
-            /*  Get the current theme from the 'data-theme' attribute */
+            //getting the current theme
             const currentTheme = root.getAttribute('data-theme');
     
-            /* Toggle between 'light' and 'dark' using an if statement */
-    
+            //change the theme using if else statement
             let newTheme;
 
+            // if current theme is light, it will change to dark if user click
             if (currentTheme === 'light') {
                 newTheme = 'dark';
-             } else {
+            
+            // if current theme is dark, it will change to light if user click
+            } else {
                 newTheme = 'light';
             }   
-            // Set the new theme to the 'data-theme' attribute
+            //set the new theme
             root.setAttribute('data-theme', newTheme)
             
-            // Store the new theme preference in local storage
+            //stored that theme
             localStorage.setItem('theme', newTheme)
             }
         
+            //function show_the_time to show what time right now
             function show_the_time(){
                 const today_time = new Date()
                 let hour = today_time.getHours()
                 let minute = today_time.getMinutes()
                 let second = today_time.getSeconds()
                 
+                //change to 2 number if the number <10
                 minute = show_2_number(minute)
                 second = show_2_number(second)
                 
-                
+                // show to the page
                 document.getElementById("time").innerHTML = hour + ":" + minute +":" + second; 
                 
+                //refresh after 1 second
                 setTimeout(show_the_time, 1000)
             }
 
+            //function show_2_number to define 2 number if the number < 10
             function show_2_number(x){
                 if (x<10)
                     x = "0" + x;
                 return x;
             }
 
+            //function hi_user to pop up message after they type their name
             function hi_user(){
+                
                 let user_input = document.querySelector("#user_input").value;
-
+                
+                //Pop up the message
                 alert("Hello " + user_input)
             }
 
+            //function change_heading to change the heading after user type their name
             function change_heading(){
                 
+                //get the name when user type in
                 var user_input = document.getElementById('user_input').value;
 
+                //store that name to local storage
                 var stored_name = localStorage.getItem('user_name');
 
+                //get the new name if there is a new prompt from user, else using the last stored name
                 var final_name = user_input || stored_name;
 
+                //get the heading
                 var heading = document.getElementById('heading');
                 
+                //change the heading 
                 heading.textContent = 'Hello ' + final_name
 
+                //stored the heading to local storage
                 localStorage.setItem('user_name', final_name);
             }
 
         </script>  
     </head>  
+    
+    <!-- calling function show_the_time and update it-->
     <body onload = "show_the_time();">    
         <header>
             
+            <!-- get id = date, change the status depend on day, month and years-->
             <div id = 'date'></div> 
+                <!-- get id = time, to call function show_the_time and showing the time right now-->
                 <p>The time right now is <span id = "time"></span></p>
                 <script>     
                 
+                //get the new date
                 var today_date = new Date();
+                
+                //store day in list named date
                 var date = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                
+                //store month in lis named month
                 var month = ["January", "February", "March", "Apirl", "May", "June", "July", "August", "September", "October", "November", "December"]
+                
+                //show to the page 
                 document.getElementById("date").innerHTML = 'Today is ' + date[today_date.getDay()] + ' ' + today_date.getDate() + ' ' + month[today_date.getMonth()] + ' ' + today_date.getFullYear();
                 
                 </script>      
+            
+            <!-- get the heading as id of h1 -->
             <h1 id = 'heading'>Header</h1>      
+            
+            <!-- do function toggle_theme if user click on the button -->
             <button onclick="toggle_theme()">Toggle Theme</button>  
             <script>
+                //store the current theme 
                 document.addEventListener('DOMContentLoaded', function () {
                 const root = document.documentElement;
     
@@ -128,7 +166,11 @@
                 <li><a href="#">Contact</a></li>      
             </ul>       
             <form>         
+                
+                <!-- get the user_input as the id -->
                 <input id = "user_input"  type="text" name="user_name" placeholder="Enter your name!">         
+                
+                <!-- do function hi_user() and change_heading() if user type on the button-->
                 <button onclick="hi_user(); change_heading()" type="button">Apply!</button>       
             </form>     
         </nav>    
@@ -137,28 +179,49 @@
                 <h2>Article heading</h2>        
                 <p>IoT Not just a new emerging technology!!!</p>        
                 <h3>Subsection</h3>        
-                <p>Internet of Things (IoT) plays an important role in the development of smart city and smart home construction projects. In the field of smart city construction, IoT is properly integrated to manage and optimize energy sources, including traffic management, street lights, and energy systems. IoT devices, such as sensors and monitoring systems, are developed to collect real-time data, helping to manage information about pollution, security and public utilities.</p>        
-                <p>In the field of smart homes, IoT allows connecting and controlling devices in the home via the internet. Users can manage lighting, temperature, security, and many other factors remotely via mobile phones or other devices. Sensors and smart devices, such as smart thermostats, security cameras, and remote controls, create a unified and convenient smart home ecosystem.</p>        
+                <p>Internet of Things (IoT) plays an important role in the development of smart city and smart home construction projects.</p>
+                <p>In the field of smart city construction, IoT is properly integrated to manage and optimize energy sources, including traffic management,</p>
+                <p>street lights, and energy systems. IoT devices, such as sensors and monitoring systems, are developed to collect real-time data, helping to manage information</p>
+                <p>about pollution, security and public utilities.</p>     
+                <br>   
+                <p>In the field of smart homes, IoT allows connecting and controlling devices in the home via the internet.</p>
+                <p> Users can manage lighting, temperature, security, and many other factors remotely via mobile phones or other devices.</p>
+                <p>Sensors and smart devices, such as smart thermostats, security cameras, and remote controls, create a unified and convenient smart home ecosystem.</p>        
                 <h3>Another subsection</h3>        
-                <p>In the field of smart homes, the combination of IoT and artificial intelligence (AI) brings optimal user experience. The system is capable of learning and self-adjusting based on habits and priorities, from device control to optimal energy savings. Devices such as refrigerators, washing machines and smart lights can interact with each other to create a flexible and user-friendly living environment.</p>        
-                <p>Thanks to the integration of IoT in city construction and smart homes, we can witness increased efficiency, energy savings, and improved quality of life for communities. However, there are also challenges such as information security and data management that need to be carefully considered and addressed to ensure the success and sustainability of these projects.</p>      
+                <p>In the field of smart homes, the combination of IoT and artificial intelligence (AI) brings optimal user experience. The system is capable of learning and</p>
+                <p>self-adjusting based on habits and priorities, from device control to optimal energy savings. Devices such as refrigerators, washing machines and smart </p>
+                <p>lights can interact with each other to create a flexible and user-friendly living environment.</p>   
+                <br>     
+                <p>Thanks to the integration of IoT in city construction and smart homes, we can witness increased efficiency, energy savings,</p>
+                <p>and improved quality of life for communities. However, there are also challenges such as information security and data management</p>
+                <p> that need to be carefully considered and addressed to ensure the success and sustainability of these projects.</p>      
             </article>      
             <aside>        
                 <h2>Related</h2>
                 <img src="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg" />
                 <p id = 'text'>"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="https://live.staticflickr.com/6023/5970254789_cb92742d19_b.jpg">https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse</a></p>        
+                
+                <!-- change the image if user click on the button by calling Do_Change function-->
                 <button onclick = "Do_Change('https://www.uc.cl/site/assets/files/6184/santiago-de-chile-de-noche700x532-1.700x532.jpg', `Cristian Quezada Valdés  (CC BY-SA 2.0)` )">
                     Pictrue 1
                 </button>
+                
+                <!-- change the image if user click on the button by calling Do_Change function-->
                 <button onclick = "Do_Change('https://riberasolutions.com/wp-content/uploads/2018/03/smart-city-iot-and-ai.png', `Attribution-ShareAlike (CC BY-SA 2.0)` )">
                     Picture 2 
                 </button>
+                
+                <!-- change the image if user click on the button by calling Do_Change function-->
                 <button onclick = "Do_Change(`https://upload.wikimedia.org/wikipedia/commons/7/71/Smart_mobility_image.png`, `Wikimedia ( CC-BY-SA-4.0)` )">
                     Picture 3 
                 </button>
+                
+                <!-- change the image if user click on the button by calling Do_Change function-->
                 <button onclick = "Do_Change('https://api.ndla.no/image-api/raw/H2PP9F6b.PNG?width=1120', `Mediafarm AS (CC BY-SA)` )">
                     Picture 4
                 </button>
+                
+                <!-- change the image if user click on the button by calling Do_Change function-->
                 <button onclick = "Do_Change('https://live.staticflickr.com/7355/16389740882_68b23e7dae_b.jpg', `	Attribution-ShareAlike (CC BY-SA 2.0)` )">
                     Picture 5 
                 </button>           
