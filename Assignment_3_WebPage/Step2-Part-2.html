@@ -19,18 +19,24 @@
     
             /* Get the root element of the document (where you set data-theme) */
             const root = document.documentElement;
-    
+                
             /*  Get the current theme from the 'data-theme' attribute */
             const currentTheme = root.getAttribute('data-theme');
     
             /* Toggle between 'light' and 'dark' using an if statement */
     
-            let newTheme = 'light';
+            let newTheme;
 
-            if (currentTheme !== 'light') {
-            newTheme = 'dark';
-            }
+            if (currentTheme === 'light') {
+                newTheme = 'dark';
+             } else {
+                newTheme = 'light';
+            }   
+            // Set the new theme to the 'data-theme' attribute
             root.setAttribute('data-theme', newTheme)
+            
+            // Store the new theme preference in local storage
+            localStorage.setItem('theme', newTheme)
             }
         
             function show_the_time(){
