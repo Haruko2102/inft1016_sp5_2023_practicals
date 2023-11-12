@@ -5,6 +5,7 @@
         <title>My page title</title>    
         <link rel="stylesheet" href="Step-2.css">    
         <script>
+            
             function Do_Change(src, text){
             // Change the image 
             const Change_Image = document.querySelector('img')
@@ -12,7 +13,8 @@
             // Change the text
             const text_paragraph = document.querySelector('#text')
             text.innerHTML = text 
-        }
+            }
+            
             function toggle_theme() {
     
             /* Get the root element of the document (where you set data-theme) */
@@ -29,17 +31,26 @@
             newTheme = 'dark';
             }
             root.setAttribute('data-theme', newTheme)
-        }
-
-
+            }
+        
+            function show_the_time(){
+                const today_time = new Date()
+                let hour = today_time.getHours()
+                let minute = today_time.getMinutes()
+                let second = today_time.getSeconds()
+                document.getElementById("time").innerHTML = hour + ":" + minute +":" + second; 
+                
+                setTimeout(show_the_time, 1000)
+            }
 
 
         </script>  
     </head>  
-    <body>    
+    <body onload = "show_the_time()">    
         <header>
-            <div id = 'date'></div>
-                
+            
+            <div id = 'date'></div> 
+                <p>The time right now is <span id = "time"></span></p>
                 <script>     
                 
                 var today_date = new Date();
