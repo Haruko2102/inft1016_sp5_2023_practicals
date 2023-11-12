@@ -70,8 +70,15 @@
                 
                 var user_input = document.getElementById('user_input').value;
 
+                var stored_name = localStorage.getItem('user_name');
+
+                var final_name = user_input || stored_name;
+
                 var heading = document.getElementById('heading');
-                heading.textContent = 'Hello ' + user_input
+                
+                heading.textContent = 'Hello ' + final_name
+
+                localStorage.setItem('user_name', final_name);
             }
 
         </script>  
@@ -99,8 +106,18 @@
                 const storedTheme = localStorage.getItem('theme');
 
                 // Apply the current theme or default
-                root.setAttribute('data-theme', storedTheme || 'light');
-});
+                root.setAttribute('data-theme', storedTheme || 'light');});
+
+                // Was there are user has typed their name
+                const stored_name = localStorage.getItem('user_name');
+                
+                // Apply the current name or stored name
+                const final_name = stored_name || 'User';
+                var heading = document.getElementById('heading');
+                heading.textContent = 'Hello ' + final_name;
+
+
+
             </script>
         </header>    
         <nav>      
