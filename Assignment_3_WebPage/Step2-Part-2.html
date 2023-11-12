@@ -90,7 +90,18 @@
                 
                 </script>      
             <h1 id = 'heading'>Header</h1>      
-            <button onclick="toggle_theme()">Toggle Theme</button>    
+            <button onclick="toggle_theme()">Toggle Theme</button>  
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                const root = document.documentElement;
+    
+                // Was there are any saved theme
+                const storedTheme = localStorage.getItem('theme');
+
+                // Apply the current theme or default
+                root.setAttribute('data-theme', storedTheme || 'light');
+});
+            </script>
         </header>    
         <nav>      
             <ul>        
