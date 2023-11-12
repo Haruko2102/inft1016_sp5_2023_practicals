@@ -38,11 +38,21 @@
                 let hour = today_time.getHours()
                 let minute = today_time.getMinutes()
                 let second = today_time.getSeconds()
+                
+                minute = show_2_number(minute)
+                second = show_2_number(second)
+                
+                
                 document.getElementById("time").innerHTML = hour + ":" + minute +":" + second; 
                 
                 setTimeout(show_the_time, 1000)
             }
 
+            function show_2_number(x){
+                if (x<10)
+                    x = "0" + x;
+                return x;
+            }
 
         </script>  
     </head>  
